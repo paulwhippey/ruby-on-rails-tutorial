@@ -12,7 +12,7 @@ check_client_connection false
 before_fork do |server, worker|
   defined?(ActiveRecord::Base) && ActiveRecord::Base.connection.disconnect!
 
-  old_pid = "#{server.confg[:pid]}.oldbin"
+  old_pid = "#{server.config[:pid]}.oldbin"
   if old_pid != server.pid
     begin
       sig = (worker.nr + 1) >= server.worker_processes ? :QUIT : :TTOU

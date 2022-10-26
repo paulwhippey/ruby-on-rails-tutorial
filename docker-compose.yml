@@ -1,4 +1,4 @@
-version "3.9"
+version: "3.9"
 
 services:
 
@@ -51,7 +51,7 @@ services:
     ports:
       - '8020:8020'
 
- volumes:
-   drkiq-postgres:
-   drkiq-redis:
+volumes:
+  drkiq-postgres:
+  drkiq-redis:
 
